@@ -4,29 +4,18 @@ import br.gov.fundatec.lp2.calculadora.model.Operacao;
 import br.gov.fundatec.lp2.calculadora.model.TipoOperacao;
 import br.gov.fundatec.lp2.calculadora.service.OperacaoService;
 
-/**
- * Classe da camada de controle para manipular o modelo Operacao. Em uma API
- * Rest, esta classe representa a porta de entrada para a API, por onde chegam
- * as requisições para manipular o recurso Operacao.
- *
- */
 public class OperacaoController {
 	
-private final OperacaoService operacaoService;
+	private final OperacaoService operacaoService;
 	
-	// Construtor utilizado para injetar as dependências da classe. Esta classe
-	// depende de uma instância de OperacaoService
 	public OperacaoController() {
 		this.operacaoService = new OperacaoService();
 	}
 	
-	// Método que recebe dois termos e um tipo de operação e cria e retorna uma
-	// Operacao já com resultado calculado
 	public Operacao criar(double primeiroTermo, double segundoTermo, TipoOperacao tipoOperacao) {
 		return operacaoService.criar(primeiroTermo, segundoTermo, tipoOperacao);
 	}
 	
-	// Método main provisório. Deve ser substituído por testes unitários.
 	public static void main(String[] args) {
 		OperacaoController controller = new OperacaoController();
 		
