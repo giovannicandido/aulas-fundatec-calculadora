@@ -1,14 +1,20 @@
 package br.gov.fundatec.lp2.calculadora.model;
 
-/**
- * Enum contendo os tipos de Operações Matemáticas suportados pela calculadora.
- *
- */
 public enum TipoOperacao {
-	
-	SOMA, 
-	SUBTRACAO, 
-	MULTIPLICACAO,
-	DIVISAO;
 
+	SOMA(new Soma()),
+	SUBTRACAO(new Subtracao()), 
+	MULTIPLICACAO(new Multiplicacao()), 
+	DIVISAO(new Divisao());
+	
+	private final IOperacaoMatematica operacaoMatematica;
+	
+	private TipoOperacao(IOperacaoMatematica operacaoMatematica) {
+		this.operacaoMatematica = operacaoMatematica;
+	}
+	
+	public IOperacaoMatematica getOperacaoMatematica() {
+		return operacaoMatematica;
+	}
+	
 }

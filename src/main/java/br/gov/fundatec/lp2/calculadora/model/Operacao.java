@@ -1,9 +1,5 @@
 package br.gov.fundatec.lp2.calculadora.model;
 
-/**
- * Classe da camada de modelo, que representa uma Operação Matemática.
- *
- */
 public class Operacao {
 
 	private double primeiroTermo;
@@ -42,4 +38,7 @@ public class Operacao {
 		return "Operacao [primeiroTermo=" + primeiroTermo + ", segundoTermo=" + segundoTermo + ", tipoOperacao="
 				+ tipoOperacao + ", resultado=" + resultado + "]";
 	}
+	
+	
+	
 }
